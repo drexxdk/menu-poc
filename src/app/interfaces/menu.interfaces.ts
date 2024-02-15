@@ -43,7 +43,7 @@ interface MenuItemBase {
 
   type ChapterItems = Page | SectionGroup;
 
-  interface Page extends MenuItemBase {
+  export interface Page extends MenuItemBase {
     type: 'page';
     path: string;
     items: PageItems[];
@@ -61,12 +61,12 @@ interface MenuItemBase {
     items: PagePanel[];
   }
   
-  interface SectionGroup extends MenuItemBase {
+  export interface SectionGroup extends MenuItemBase {
     type: 'section-group';
     items: SectionGroupItems[];
   }
 
-  type SectionGroupItems = Page | PagePanel;
+  type SectionGroupItems = Page | PagePanel | QuestionGroup;
   
   interface GridGroup extends MenuItemBase {
     type: 'grid-group';

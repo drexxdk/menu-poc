@@ -70,6 +70,25 @@ export const chapterMenuMock: ChapterMenu = {
                             heading: 'page2',
                             path: 'page/5',
                             items: []
+                        },
+                        {
+                            type: 'question-group',
+                            heading: 'question group 1',
+                            id: '10',
+                            items: [
+                                {
+                                    type: 'page-panel',
+                                    id: '11',
+                                    heading: 'page panel 5',
+                                    path: ''
+                                },
+                                {
+                                    type: 'page-panel',
+                                    id: '11',
+                                    heading: 'page panel 6',
+                                    path: ''
+                                }
+                            ]
                         }
                     ]
                 },
