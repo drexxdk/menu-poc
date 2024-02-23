@@ -22,7 +22,7 @@ const CourseMenu = ({ menu }: { menu: CourseMenuModel }) => {
           setItem({ ...item, mode: isEnabled ? "edit" : "default" });
         }}
       >
-        <h2 className="bg-green-500 text-black p-2">[chapter] {item.mode}</h2>
+        <h2 className="text-black p-2 bg-neutral-500">[course] {item.mode}</h2>
       </MenuItemRow>
       <ChapterList
         chapters={item.chapters}

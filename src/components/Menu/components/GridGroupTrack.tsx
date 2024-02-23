@@ -50,7 +50,12 @@ const GridGroupTrack = ({
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-pink-500 text-black w-full text-left flex gap-2 items-center p-2 hover:bg-pink-300"
+          className={classNames(
+            "text-black w-full text-left flex gap-2 items-center p-2",
+            gridGroupTrack.isEnabled
+              ? "bg-pink-500 hover:bg-pink-300"
+              : "bg-gray-300 hover:bg-gray-100"
+          )}
         >
           <Icon>
             <GridGroupTrackIcon />

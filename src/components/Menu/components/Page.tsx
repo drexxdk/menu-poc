@@ -1,4 +1,5 @@
 import { MenuMode, PageModel } from "@/components/Menu/menu.interfaces";
+import classNames from "classnames";
 import MenuItemRow from "./MenuItemRow";
 import PageItemsList from "./PageItemList";
 
@@ -26,7 +27,14 @@ const Page = ({
           onChange?.({ page: { ...page, isEnabled }, isEnabled });
         }}
       >
-        <h2 className="bg-blue-500 text-black p-2">[page] {page.heading}</h2>
+        <h2
+          className={classNames(
+            "text-black flex gap-2 items-center p-2",
+            page.isEnabled ? "bg-blue-500" : "bg-gray-300"
+          )}
+        >
+          [page] {page.heading}
+        </h2>
       </MenuItemRow>
       <PageItemsList
         pageItems={page.items}

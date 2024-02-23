@@ -1,6 +1,7 @@
 import GridGroupIcon from "@/components/Icon/GridGroupIcon";
 import Icon from "@/components/Icon/Icon";
 import { GridGroupModel, MenuMode } from "@/components/Menu/menu.interfaces";
+import classNames from "classnames";
 import GridGroupTrackList from "./GridGroupTrackList";
 import MenuItemRow from "./MenuItemRow";
 
@@ -43,7 +44,12 @@ const GridGroup = ({
           });
         }}
       >
-        <h2 className="bg-amber-500 text-black flex gap-2 items-center p-2">
+        <h2
+          className={classNames(
+            "text-black flex gap-2 items-center p-2",
+            gridGroup.isEnabled ? "bg-amber-500" : "bg-gray-300"
+          )}
+        >
           <Icon>
             <GridGroupIcon />
           </Icon>

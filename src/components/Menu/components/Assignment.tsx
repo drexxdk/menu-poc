@@ -1,4 +1,5 @@
 import { AssignmentModel, MenuMode } from "@/components/Menu/menu.interfaces";
+import classNames from "classnames";
 import MenuItemRow from "./MenuItemRow";
 
 const Assignment = ({
@@ -25,7 +26,12 @@ const Assignment = ({
       }}
     >
       <div className="border-white ml-4 border-l-2">
-        <h2 className="bg-green-500 text-black p-2">
+        <h2
+          className={classNames(
+            "text-black p-2",
+            assignment.isEnabled ? "bg-green-500" : "bg-gray-300"
+          )}
+        >
           [assignment] {assignment.heading}
         </h2>
       </div>

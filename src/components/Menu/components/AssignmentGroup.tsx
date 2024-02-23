@@ -55,7 +55,12 @@ const AssignmentGroup = ({
         >
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="bg-red-500 text-black w-full text-left flex gap-2 items-center p-2 hover:bg-red-300"
+            className={classNames(
+              "text-black w-full text-left flex gap-2 items-center p-2",
+              assignmentGroup.isEnabled
+                ? "bg-red-500 hover:bg-red-300"
+                : "bg-gray-300 hover:bg-gray-100"
+            )}
           >
             <Icon>
               <AssignmentGroupIcon />

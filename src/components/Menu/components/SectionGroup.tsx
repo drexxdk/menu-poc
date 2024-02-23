@@ -1,4 +1,5 @@
 import { MenuMode, SectionGroupModel } from "@/components/Menu/menu.interfaces";
+import classNames from "classnames";
 import MenuItemRow from "./MenuItemRow";
 import SectionGroupItemList from "./SectionGroupItemList";
 
@@ -29,7 +30,12 @@ const SectionGroup = ({
           });
         }}
       >
-        <h2 className="bg-orange-500 text-black p-2 font-bold">
+        <h2
+          className={classNames(
+            "text-black flex gap-2 items-center p-2 font-bold",
+            sectionGroup.isEnabled ? "bg-orange-500" : "bg-gray-300"
+          )}
+        >
           [section-group] {sectionGroup.heading}
         </h2>
       </MenuItemRow>

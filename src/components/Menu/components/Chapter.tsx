@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { getIsEnabled } from "../helpers/getIsEnabled";
 import { setIsEnabled } from "../helpers/setIsEnabled";
 import { ChapterModel, MenuMode } from "../menu.interfaces";
@@ -31,7 +32,12 @@ const Chapter = ({
           });
         }}
       >
-        <h2 className="bg-yellow-500 text-black p-2">
+        <h2
+          className={classNames(
+            "text-black p-2",
+            chapter.isEnabled ? "bg-yellow-500" : "bg-gray-300"
+          )}
+        >
           [chapter] {chapter.heading}
         </h2>
       </MenuItemRow>
